@@ -36,7 +36,7 @@ if (isset($_SESSION["role"]) && $_SESSION["role"] == "456_cryptos_admin") {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+            <link rel="icon" href="../../home/img/logo.png" />
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">

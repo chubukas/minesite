@@ -17,18 +17,6 @@ $prodata = new Profiledetails;
                         
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div style="color: white; margin-bottom: 20px;">
-                            <h5>Refer link : </h5>
-                                <div class="input-group mg-b-pro-edt">
-                                    <input type="text" id="myInput" value="<?php echo $prodata->myReflink; ?>" 
-                                        name="myInput" class="form-control" disabled 
-                                        style="color: black; font-weight:bold;"
-                                    />
-                                     <span class="input-group-addon"> 
-                                         <button onclick="copyText()" style="color: black; font-weight:bold; padding: 8px;">Copy Link</button>
-                                    </span>
-                                </div>        
-                        </div>
                         <div class="income-dashone-total reso-mg-b-30">
 
                             <div id="myTabContent" class="tab-content custom-product-edit">

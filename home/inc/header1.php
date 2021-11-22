@@ -20,10 +20,10 @@ if (isset($_GET["regx"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Welcome to Vatican Investment Limited</title>
+    <title>Vatican Investment Limited</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+     <link rel="icon" href="./img/logo.png" />
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
 

@@ -20,12 +20,14 @@ if (isset($_SESSION["role"]) && $_SESSION["role"] == "123_cryptos_user") {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><?php echo $_SESSION["name"]; ?></title>
+    <!-- <title> <?php //echo $_SESSION["name"]; ?></title> -->
+     <title> Vatican Investment Limited</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
     <!-- <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"> -->
+         <link rel="icon" href="../../home/img/logo.png" />
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">

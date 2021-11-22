@@ -64,7 +64,16 @@ if ($ethereum->num_rows > 0)
                                             <form onsubmit="deposit()">         
                                                 <div class="review-content-section">                                               
                                                     <div class="input-group mg-b-pro-edt overIn">
-                                                        <p style="color: white; font-weight: bolder;"><?php echo $bitcoinAddress ?></p>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <input type="text" id="myInput" value="<?php echo $bitcoinAddress; ?>" 
+                                                                name="myInput" class="form-control" disabled 
+                                                                style="color: black; font-weight:bold;"
+                                                            />
+                                                            <span class="input-group-addon"> 
+                                                                <div onclick="copyText()" 
+                                                                style="color: white; font-weight:bold; padding: 8px; cursor: pointer; ">Copy Link</div>
+                                                            </span>
+                                                        </div> 
                                                         <ul style="color: white;">
                                                             <li><i class="fa fa-dot-circle-o"></i> All payment should be made into the above accounts</li>
                                                             <li><i class="fa fa-dot-circle-o"></i> After payment, kindly paste the transaction ID for confirmation</li>
@@ -139,7 +148,16 @@ if ($ethereum->num_rows > 0)
                                             <form onsubmit="depositEth()">         
                                                 <div class="review-content-section">                                               
                                                     <div class="input-group mg-b-pro-edt overIn">
-                                                        <p style="color: white; font-weight: bolder;"><?php echo $ethereumAddress; ?></p>
+                                                        <div class="input-group mg-b-pro-edt">
+                                                            <input type="text" id="myInputeht" value="<?php echo $ethereumAddress; ?>" 
+                                                                name="myInputeht" class="form-control" disabled 
+                                                                style="color: black; font-weight:bold;"
+                                                            />
+                                                            <span class="input-group-addon"> 
+                                                                <div onclick="copyEth()" 
+                                                                style="color: white; font-weight:bold; padding: 8px; cursor: pointer; ">Copy Link</div>
+                                                            </span>
+                                                        </div> 
                                                         <ul style="color: white;">
                                                             <li><i class="fa fa-dot-circle-o"></i> All payment should be made into the above accounts</li>
                                                             <li><i class="fa fa-dot-circle-o"></i> After payment, kindly paste the transaction ID for confirmation</li>

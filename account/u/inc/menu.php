@@ -59,7 +59,7 @@
 <li class="active">
     <a class="" href="refers">
            <i class="fa fa-user icon-wrap"></i>
-           <span class="mini-click-non">Refers</span>
+           <span class="mini-click-non">Referral</span>
         </a>
 </li>
 

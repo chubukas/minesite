@@ -23,7 +23,7 @@
                         </div>
                         <div class="d-none d-md-block col-12 col-md-5">
                             <div class="hero-slides-thumb" data-animation="fadeInUp" data-delay="1000ms">
-                                <img src="img/btcthe.jpg" alt="" class="rounded-circle">
+                                <img src="img/picshero.jpg" alt="" class="rounded-circle">
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="d-none d-md-block col-12 col-md-5">
                             <div class="hero-slides-thumb" data-animation="fadeInUp" data-delay="1000ms">
-                                <img src="img/workbtc.jpg" alt="" class="rounded-circle">
+                                <img src="img/picshero.jpg" alt="" class="rounded-circle">
                             </div>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
             <div class="row align-items-center">
                 <div class="col-12 col-md-3">
                     <div class="about-thumbnail mb-100">
-                        <img src="img/aboutus.jpg" alt="" class="contactusImg img-fluid">
+                        <img src="img/picshero.jpg" alt="" class="contactusImg img-fluid">
                     </div>
                 </div>
                 <div class="col-12 col-md-9">
@@ -160,7 +160,7 @@
     <section class="currency-calculator-area section-padding-100 bg-img bg-overlay mb-0" style="background-image: url(img/bg-img/bg-2.jpg);">
         <div class="container">
             <div class="row">
-                <div class="col-8">
+                <div class="col-md-6">
                     <div class="section-heading text-center white mx-auto">
                         <h3 class="mb-4"> VALUES AND SERVICES</h3>
                         <p>
@@ -186,9 +186,15 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-md-3">
                     <iframe 
                         src="img/VATICANINVESTMENT.pdf" 
+                        width="100%" height="500px">
+                    </iframe>
+                </div>
+                <div class="col-md-3">
+                    <iframe 
+                        src="img/vIstage.pdf" 
                         width="100%" height="500px">
                     </iframe>
                 </div>
