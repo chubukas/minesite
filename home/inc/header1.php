@@ -19,6 +19,12 @@ if (isset($_GET["regx"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <meta property="og:site_name" content="vactican investment limited">
+	<meta property="og:title" content="Trade Forex With vactican investment limited" />
+	<meta name="description" content="Trade Forex With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
+	<meta property="og:description" content="Trade Forex With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
+	<meta property="og:type" content="website" />
+
     <!-- Title -->
     <title>Vatican Investment Limited</title>
 
@@ -26,6 +32,19 @@ if (isset($_GET["regx"])) {
      <link rel="icon" href="./img/logo.png" />
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'd6931715da6ffc170daad91bfa43e86f286b793d';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+
 
 </head>
 

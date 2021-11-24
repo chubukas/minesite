@@ -3,23 +3,23 @@
 
 <!-- Head -->
 
-<!-- Mirrored from MatrixCapitals.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Jun 2020 11:35:08 GMT -->
+<!-- Mirrored from vactican investment limited.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Jun 2020 11:35:08 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <!-- /Added by HTTrack -->
 <head>
 	<meta charset="utf-8"/>
 	<meta http-equiv="x-ua-compatible" content="ie=edge"/>
-	<title>Home &bull; MatrixCapitals</title>
+    <title>Vatican Investment Limited</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 	<!-- <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png"> -->
 	<!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
 
-	<meta property="og:site_name" content="MatrixCapitals">
-	<meta property="og:title" content="Trade Forex With MatrixCapitals" />
-	<meta name="description" content="Trade Forex With MatrixCapitals, it's totally different from its competitors trying to achieve something special starting with the...">
-	<meta property="og:description" content="Trade Forex With MatrixCapitals, it's totally different from its competitors trying to achieve something special starting with the...">
+	<meta property="og:site_name" content="vactican investment limited">
+	<meta property="og:title" content="Trade Forex With vactican investment limited" />
+	<meta name="description" content="Trade Forex With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
+	<meta property="og:description" content="Trade Forex With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
 	<meta property="og:type" content="website" />
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic" rel="stylesheet"/>
@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
       <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/custom.css"/>	
+         <link rel="icon" href="home/img/logo.png" />
 </head>
 
 <body>

@@ -239,20 +239,43 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="carousel-caption">
-                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen. </p> <img src="img/Use-tablet-to-do-business-data-analysis-Stock-Photo-061.jpg">
-                                <div id="image-caption">Nick Doe</div>
+                                <p>I have been investing with Vatican investment for over a year, 
+                                    I started during the pandemic in 2020 and I must saying that 
+                                    Vatican investment 
+                                    is second to none… 
+                                </p> 
+                                <img src="img/mama.jpeg" height="30px">
+                                <div>
+                                   <span id="image-caption">Sharon Wright</span>  <br/>
+                                  <span> America</span>  
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="carousel-caption">
-                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="img/Use-tablet-to-do-business-data-analysis-Stock-Photo-061.jpg" class="img-fluid">
-                                <div id="image-caption">Cromption Greves</div>
+                                <p>I was live at the opening of Vatican investment over the years. 
+                                    since then all the stories I have been hearing has really been 
+                                    amazing, super fast support service and many more.. be sure to 
+                                    sleep with your two eyes closed when you invest with them 
+                                </p> 
+                                <img src="img/father.jpeg" height="30px">
+                                <div>
+                                   <span id="image-caption">Rev Father James Williams </span>  <br/>
+                                  <span> Germany</span>  
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="carousel-caption">
-                                <p>If Shai Reznik's TDD videos don't convince you to add automated testing your code, I don't know what will.This was the very best explanation of frameworks for brginners that I've ever seen.</p> <img src="img/Use-tablet-to-do-business-data-analysis-Stock-Photo-061.jpg" class="img-fluid">
-                                <div id="image-caption">Harry Mon</div>
+                                <p>We came to Vatican City for pilgrimage and we heard about Vatican 
+                                    investment, we decided to invest and since then things has been 
+                                    really amazing for us.
+                                </p> 
+                                <img src="img/couple.jpeg">
+                                <div>
+                                   <span id="image-caption">Fredrick’s </span>  <br/>
+                                  <span> Canada</span>  
+                                </div>
                             </div>
                         </div>
                     </div> <a class="carousel-control-prev" href="#demo" data-slide="prev"> <i class='fas fa-arrow-left'></i> </a> <a class="carousel-control-next" href="#demo" data-slide="next"> <i class='fas fa-arrow-right'></i> </a>
@@ -262,17 +285,13 @@
 
     <div class="container containerContact d-md-flex justify-content-center" id="contact">
     <div class="row mx-2">
-        <div class="col-12 col-md-4"> 
-            <img src="img/contactus.jpg" alt="IMG" class="contactusImg img-fluid"> 
-        </div>
-        <!--col-->
-        <div class="col-12 col-md-8 mt-4 mt-md-0">
-            <h2 class="form-title">Contact us</h2>
-            <p class="justify text-muted">Have an enquiry or would like to give us feedback?<br>Fill out the form below to contact our team.</p>
+        <div class="my-4">
+            <h2 class="">Contact us</h2>
+            <p class="justify">Have an enquiry or would like to give us feedback?<br>Fill out the form below to contact our team.</p>
             <form onsubmit="sendContactMail()">
-                <div class="form-group pt-2 pl-1"> <label for="exampleInputName">Your name</label> <input type="text" class="form-control" id="exampleInputName"> </div>
-                <div class="form-group pl-1"> <label for="exampleInputEmail1">Your email address</label> <input type="email" class="form-control" id="exampleInputEmail1"> </div>
-                <div class="form-group pl-1"> <label for="exampleFormControlTextarea1">Your message</label> <textarea class="form-control" id="exampleFormControlTextarea" rows="5"></textarea> </div>
+                <div class="pt-3 pl-1"> <label for="exampleInputName">Your name</label> <input type="text" class="form-control" id="exampleInputName"> </div>
+                <div class="pt-3  pl-1"> <label for="exampleInputEmail1">Your email address</label> <input type="email" class="form-control" id="exampleInputEmail1"> </div>
+                <div class="pt-3  pl-1"> <label for="exampleFormControlTextarea1">Your message</label> <textarea class="form-control" id="exampleFormControlTextarea" rows="5"></textarea> </div>
                 <div class="row">
                     <div class="col-md-3 offset-md-9">
                         <button type="submit" class="btn btn-primary btnContact" 
