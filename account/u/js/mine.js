@@ -1,15 +1,40 @@
 function copyText() {
   /* Get the text field */
-  var copyText = document.getElementById("myInput");
+  let copyText = document.getElementById("myInput");
 
+  copyText.focus();
   /* Select the text field */
   copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  // copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
   /* Copy the text inside the text field */
 
   navigator.clipboard.writeText(copyText.value);
-  alert("copied");
+
+  swal({
+    title: "Copied",
+    text: "",
+    icon: "success",
+  });
+}
+
+function copyTextBTC() {
+  /* Get the text field */
+  let copyText = document.getElementById("myInputBTCnom");
+
+  copyText.focus();
+  /* Select the text field */
+  copyText.select();
+  // copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+
+  navigator.clipboard.writeText(copyText.value);
+  swal({
+    title: "Copied",
+    text: "",
+    icon: "success",
+  });
 }
 
 function copyEth() {
@@ -18,11 +43,16 @@ function copyEth() {
 
   /* Select the text field */
   copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  // copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
   /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText.value);
-  alert("copied");
+
+  swal({
+    title: "Copied",
+    text: "",
+    icon: "success",
+  });
 }
 
 function exchangeCoin() {
@@ -300,7 +330,7 @@ const withdraw = () => {
         u_innerHTML("withbtn", "Submited");
         u_innerHTML(
           "responseswith",
-          '<p class="alert alert-success" >Your withdrawal request is  been proccessed and will take about  24 hours</p>'
+          '<p class="alert alert-success" > Successfully!!! Your funds will be creadited to you automatically</p>'
         );
       }, 1500);
     } else {
@@ -360,7 +390,7 @@ const transfer = () => {
         u_innerHTML("transferbtn", "Submited");
         u_innerHTML(
           "transferwith",
-          '<p class="alert alert-success" >Your withdrawal request is  been proccessed and will take about  24 hours</p>'
+          '<p class="alert alert-success" > Successfully!!! Your transfer will credited to the receiver automatically</p>'
         );
       }, 1500);
     } else {

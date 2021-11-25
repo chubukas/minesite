@@ -244,7 +244,7 @@
                                     Vatican investment 
                                     is second to none… 
                                 </p> 
-                                <img src="img/mama.jpeg" height="30px">
+                                <img src="img/mama.jpeg">
                                 <div>
                                    <span id="image-caption">Sharon Wright</span>  <br/>
                                   <span> America</span>  

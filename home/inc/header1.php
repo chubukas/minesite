@@ -20,9 +20,9 @@ if (isset($_GET["regx"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <meta property="og:site_name" content="vactican investment limited">
-	<meta property="og:title" content="Trade Forex With vactican investment limited" />
-	<meta name="description" content="Trade Forex With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
-	<meta property="og:description" content="Trade Forex With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
+	<meta property="og:title" content="Invest With vactican investment limited" />
+	<meta name="description" content="Invest With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
+	<meta property="og:description" content="Invest With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
 	<meta property="og:type" content="website" />
 
     <!-- Title -->
@@ -33,10 +33,10 @@ if (isset($_GET["regx"])) {
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Smartsupp Live Chat script -->
+<!-- Smartsupp Live Chat script -->
 <script type="text/javascript">
 var _smartsupp = _smartsupp || {};
-_smartsupp.key = 'd6931715da6ffc170daad91bfa43e86f286b793d';
+_smartsupp.key = '1a7b221a7a0f08aa1cfe1cd687cf6f92daa056a0';
 window.smartsupp||(function(d) {
   var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
   s=d.getElementsByTagName('script')[0];c=d.createElement('script');
@@ -44,6 +44,7 @@ window.smartsupp||(function(d) {
   c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
 })(document);
 </script>
+
 
 
 </head>

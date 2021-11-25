@@ -43,7 +43,7 @@ class crodjobPayroi extends connection
                             die();
                         }
 
-                        $alreadyroi = $dateData["roi_invest"] + $roiamount;
+                        $alreadyroi = $dateData["roi_invest"] + $roiinvest;
                     }
 
                     $sql = "UPDATE investments SET roi_invest = '$alreadyroi', update_date = '$regdate' WHERE investment_id = '$transactID'";

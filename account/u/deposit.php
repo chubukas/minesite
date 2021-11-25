@@ -65,12 +65,12 @@ if ($ethereum->num_rows > 0)
                                                 <div class="review-content-section">                                               
                                                     <div class="input-group mg-b-pro-edt overIn">
                                                         <div class="input-group mg-b-pro-edt">
-                                                            <input type="text" id="myInput" value="<?php echo $bitcoinAddress; ?>" 
-                                                                name="myInput" class="form-control" disabled 
+                                                            <input type="text" id="myInputBTCnom" value="<?php echo $bitcoinAddress; ?>" 
+                                                                name="myInputBTCnom" class="form-control" disabled 
                                                                 style="color: black; font-weight:bold;"
                                                             />
                                                             <span class="input-group-addon"> 
-                                                                <div onclick="copyText()" 
+                                                                <div onclick="copyTextBTC()" 
                                                                 style="color: white; font-weight:bold; padding: 8px; cursor: pointer; ">Copy Link</div>
                                                             </span>
                                                         </div> 

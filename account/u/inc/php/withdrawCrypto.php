@@ -55,7 +55,7 @@ if (isset($_POST["withbtn"])) {
 
         $transtype = "withdraw";
         $regdate = date("d-m-y");
-        $stat = "1";
+        $stat = "11";
 
          if (isset($_SESSION["harsh"])) {
             $ref = $_SESSION["harsh"];

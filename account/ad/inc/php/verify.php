@@ -33,7 +33,8 @@ class Acceptpayment extends connection
                 $transId = $userdata["transaction_id"];
                 $mainAmount = $userdata["amount"];
 
-                $bouns =    (($mainAmount * 0.20 ) / 100 );
+                // $bouns =    (($mainAmount * 0.20 ) / 100 );
+                $bouns =    ((10 / 100 ) * $mainAmount );
 
                 $seletDeposit = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'depositApproved' AND user_id = '$userId'");  
              

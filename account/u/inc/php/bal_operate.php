@@ -34,7 +34,7 @@ class Operates extends connection
         
     	 $email = $_SESSION["email"];
 
-        $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND stat = '1' AND btc_trans_id = '$email'");
+        $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND btc_trans_id = '$email'");
        
         if ($checkbal->num_rows > 0) {
         	while ($amount = $checkbal->fetch_assoc()) {
@@ -52,7 +52,7 @@ class Operates extends connection
     	$userid = $_SESSION["id"];
     	
         // $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw4roi2wallet' AND stat = '11' AND user_id = '$userid'");
-        $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND stat = '1' AND user_id = '$userid'");
+        $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND user_id = '$userid'");
         if ($checkbal->num_rows > 0) {
         	while ($amount = $checkbal->fetch_assoc()) {
         		$this->withdrawals += $amount["amount"];
@@ -69,7 +69,7 @@ class Operates extends connection
     	$userid = $_SESSION["id"];
     	
         // $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw4roi2wallet' AND stat = '11' AND user_id = '$userid'");
-        $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND stat = '1' AND user_id = '$userid'");
+        $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND user_id = '$userid'");
         if ($checkbal->num_rows > 0) {
         	while ($amount = $checkbal->fetch_assoc()) {
         		$this->transfers += $amount["amount"];
@@ -80,17 +80,8 @@ class Operates extends connection
 
     public function wallet_bal()
     {
-    	// return $this->deposit_bal() + $this->withdrawals();
-        $total = $this->deposit_bal() + $this->recieves_bal();
-        if ($this->myInvesments() > $total) 
-        {
-            return $this->myInvesments() - $total;
-        }
-        else
-        {
-           return $total - $this->myInvesments(); 
-        }
-        // return ($this->deposit_bal() + $this->recieves_bal()) - $this->myInvesments();
+
+        return ($this->deposit_bal() + $this->recieves_bal()) - $this->myInvesments();
        
     }
 

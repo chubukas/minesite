@@ -1688,7 +1688,7 @@ textarea:focus {
 
 /* Testimonies */
 #demo {
-  background: linear-gradient(112deg, #ffffff 50%, #d7d7fa 50%);
+  background: linear-gradient(112deg, #1d14a3 50%, #020246 50%);
   max-width: 900px;
   margin: auto;
 }
@@ -1697,12 +1697,17 @@ textarea:focus {
   position: initial;
   z-index: 10;
   padding: 5rem 8rem;
-  color: rgba(78, 77, 77, 0.856);
+  color: white !important;
   text-align: center;
   font-size: 1.2rem;
   font-style: italic;
   font-weight: bold;
   line-height: 2rem;
+}
+
+.carousel-caption p {
+  color: white !important;
+  font-size: 18px;
 }
 
 @media (max-width: 767px) {
@@ -1720,18 +1725,18 @@ textarea:focus {
 }
 
 .carousel-caption img {
-  width: 6rem;
+  width: 10rem;
   border-radius: 100%;
   margin-top: 2rem;
-  height: 6rem;
+  height: 10rem;
 }
 
 @media (max-width: 767px) {
   .carousel-caption img {
-    width: 4rem;
+    width: 8rem;
     border-radius: 100%;
     margin-top: 1rem;
-    height: 4rem;
+    height: 8rem;
   }
 }
 

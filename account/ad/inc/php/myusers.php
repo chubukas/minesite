@@ -28,6 +28,10 @@ class Myuser extends connection
                 $country = $usersdata["country"];
                 $password = $usersdata["pwd"];
 
+                $link = explode("=",$userdata["myReflink"]);
+
+			    $refs = $link[1];
+
                 
                 $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'depositApproved' AND user_id = '$uid'");
                 if ($checkbal->num_rows > 0) 
@@ -40,7 +44,7 @@ class Myuser extends connection
                 }
 
                 $myreceive = 0;
-                $receive = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND stat = '1' AND btc_trans_id = '$email'");
+                $receive = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND btc_trans_id = '$email'");
                 if ($receive->num_rows > 0) 
                 {
                     while ($amounts = $receive->fetch_assoc()) 
@@ -69,11 +73,39 @@ class Myuser extends connection
                     }
                 }
 
+                $withdrawals = 0;
+                $checkwith = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND user_id = '$uid'");
+                if ($checkwith->num_rows > 0) {
+                    while ($amount = $checkwith->fetch_assoc()) {
+                        $withdrawals += $amount["amount"];
+                    }
+                }
+
+                $returnrefs = 0;
+                $checkReferal = $this->connect()->query("SELECT * FROM referer_bouns WHERE ref = '$refs'");
+                if ($checkReferal->num_rows > 0) {
+                    while ($amount = $checkReferal->fetch_assoc()) {
+                        $returnrefs += $amount["bouns"];
+                    }
+                }
+
+                $mytransfer = 0;
+                $checktrans = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND user_id = '$uid'");
+                if ($checktrans->num_rows > 0) {
+                    while ($amount = $checktrans->fetch_assoc()) {
+                        $mytransfer += $amount["amount"];
+                    }
+                }
+
+
                 $depoRece = $deposit + $myreceive;
 
                 $total = $depoRece - $myinvest;
 
                 $total = (int)$total;
+
+                $roiInvest = ($returnrefs + $roiInvest) - ($mytransfer + $withdrawals);
+
 
 
                 if ($role != "456_cryptos_admin") 
@@ -97,7 +129,7 @@ class Myuser extends connection
                                     </div>
                               </form>
                             </td>
-                             <td>'.$roiInvest.'</td>
+                             <td>'.number_format($roiInvest).'</td>
                             <td>
                                 <form onsubmit="updateRoi('.$uid.')" >
                                    <div class="input-group mg-b-pro-edt" style="padding-top: 10px;">

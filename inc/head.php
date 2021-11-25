@@ -17,9 +17,9 @@
 	<!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
 
 	<meta property="og:site_name" content="vactican investment limited">
-	<meta property="og:title" content="Trade Forex With vactican investment limited" />
-	<meta name="description" content="Trade Forex With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
-	<meta property="og:description" content="Trade Forex With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
+	<meta property="og:title" content="Invest With vactican investment limited" />
+	<meta name="description" content="Invest With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
+	<meta property="og:description" content="Invest With vactican investment limited, it's totally different from its competitors trying to achieve something special starting with the...">
 	<meta property="og:type" content="website" />
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic" rel="stylesheet"/>

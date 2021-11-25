@@ -102,6 +102,8 @@ $('.stop').on('click',function(){
     <script src="js/main.js"></script>
     <script src="js/mine.js"></script>
     <script src="owl-carousel/owl.carousel.min.js"></script>
+     <script src="js/sweet.js"></script>
+ <script src="js/sweetalert2.js"></script>
     
 
     <script type="text/javascript">
