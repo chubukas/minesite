@@ -9,8 +9,8 @@ class Myuser extends connection
     function __construct()
     {
         $this->sn = 1;
-        $userid = $_SESSION['id'];
-        $ref = $_SESSION['harsh'];
+        // $userid = $_SESSION['id'];
+        // $ref = $_SESSION['harsh'];
         
         $users = $this->connect()->query("SELECT * FROM crypto_users ORDER BY user_id DESC ");
         if ($users->num_rows > 0) 
@@ -28,11 +28,10 @@ class Myuser extends connection
                 $country = $usersdata["country"];
                 $password = $usersdata["pwd"];
 
-                $link = explode("=",$userdata["myReflink"]);
+                $link = explode("=", $usersdata["myReflink"]);
 
 			    $refs = $link[1];
 
-                
                 $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'depositApproved' AND user_id = '$uid'");
                 if ($checkbal->num_rows > 0) 
                 {
@@ -90,7 +89,7 @@ class Myuser extends connection
                 }
 
                 $mytransfer = 0;
-                $checktrans = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND user_id = '$uid'");
+                $checktrans = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND user_id = '$uid'");
                 if ($checktrans->num_rows > 0) {
                     while ($amount = $checktrans->fetch_assoc()) {
                         $mytransfer += $amount["amount"];
@@ -102,7 +101,6 @@ class Myuser extends connection
 
                 $total = $depoRece - $myinvest;
 
-                $total = (int)$total;
 
                 $roiInvest = ($returnrefs + $roiInvest) - ($mytransfer + $withdrawals);
 
@@ -129,7 +127,7 @@ class Myuser extends connection
                                     </div>
                               </form>
                             </td>
-                             <td>'.number_format($roiInvest).'</td>
+                             <td>'.$roiInvest.'</td>
                             <td>
                                 <form onsubmit="updateRoi('.$uid.')" >
                                    <div class="input-group mg-b-pro-edt" style="padding-top: 10px;">

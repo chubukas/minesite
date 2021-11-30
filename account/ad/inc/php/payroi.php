@@ -39,6 +39,10 @@ class Payroi extends connection
                 // $type = $transdata["transaction_type"]; 
                 // $type = $transdata["transaction_type"]; 
                 // $type = $transdata["transaction_type"]; 
+                $transactpercent = $transdata["roi_percent"];
+
+                $roiinvest  =    (($amount * $transactpercent ) / 100 );  
+
                 $userdetail = $this->connect()->query("SELECT * FROM crypto_users WHERE user_id = '$transuserid'");
                 if ($userdetail->num_rows > 0) {
                     $userdata = $userdetail->fetch_assoc();
@@ -67,7 +71,7 @@ echo '
 
                                            <!--  <input type="text" class="form-control" name="roiamount" id="'.$transactID.'"> -->
 
-                                            <button onclick="payroi('.$transuserid.')" data-toggle="tooltip" title="Credit daily returns" class="ps-setting w-100 mt-2">
+                                             <button onclick="payroi('.$transuserid.','.$roiinvest.')" data-toggle="tooltip" title="Credit daily returns" class="ps-setting w-100 mt-2">
                                                 Credit ROI
                                             </button>
                                         <!-- </form> -->

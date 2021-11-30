@@ -9,7 +9,7 @@ class crodjobPayroi extends connection
     {
 
       $regdate = date("d-m-Y");
-        
+
         $trans = $this->connect()->query("SELECT * FROM investments");
         if ($trans->num_rows > 0) 
         {
@@ -31,7 +31,7 @@ class crodjobPayroi extends connection
                 if ($now < $exp) 
                 {
 
-                    $check = $this->connect()->query("SELECT update_date FROM investments WHERE investment_id = '$transactID'");
+                    $check = $this->connect()->query("SELECT update_date, roi_invest FROM investments WHERE investment_id = '$transactID'");
 
                     if ($check->num_rows > 0) 
                     {
@@ -71,7 +71,7 @@ class crodjobPayroi extends connection
 
                         $total = $allAmount + $allRoi;
 
-                        $sql = "UPDATE investments SET roi_invest = '$total', amount = 0 WHERE investment_id = '$transactID'";
+                        $sql = "UPDATE investments SET roi_invest = '$total', amount = 0, update_date = '$regdate' WHERE investment_id = '$transactID'";
                         $query = $this->connect()->query($sql);
 
                         if ($query) 

@@ -29,12 +29,11 @@ class Acceptpayment extends connection
                 $userdata = $check->fetch_assoc();
 
                 $userId = $userdata["user_id"];
-                $refs = $userdata["ref"];
-                $transId = $userdata["transaction_id"];
+                // $refs = $userdata["ref"];
+                // $transId = $userdata["transaction_id"];
                 $mainAmount = $userdata["amount"];
 
-                // $bouns =    (($mainAmount * 0.20 ) / 100 );
-                $bouns =    ((10 / 100 ) * $mainAmount );
+                // $bouns =    ((10 / 100 ) * $mainAmount );
 
                 $seletDeposit = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'depositApproved' AND user_id = '$userId'");  
              
@@ -83,26 +82,6 @@ class Acceptpayment extends connection
 
             }
 
-            $checktransact = $this->connect()->query("SELECT transaction_id FROM referer_bouns WHERE transaction_id = '$transId'");
-
-            if ($checktransact->num_rows > 0) {
-                echo "Payment already accepted";
-                die();
-            }
-
-            $insert =  $this->connect()->prepare("INSERT INTO referer_bouns (bouns, ref, transaction_id) VALUES(?,?,?)"); 
-            $insert->bind_param("sss", $bouns, $refs, $transId);
-
-            if ($insert->execute())
-            {
-                            
-            echo " ". "Successfully";
-
-            }else
-            {
-            echo "Failed please try again";
-            die();
-            }
         }    
         
     }
