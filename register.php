@@ -155,12 +155,12 @@ foreach ($countries as $country) {
                         </select>
                     </div>
 
-                    <div class="form_group">
+                    <!-- <div class="form_group">
                         <label class="form_label">BTC Address:</label>
                         <input required type="text" id="btcaddress"  name="phone" value=""
                                class="form_control" style="width:100%;">
                         
-                    </div>
+                    </div> -->
                     
 
                     <div class="form_group">

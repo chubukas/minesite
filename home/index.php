@@ -247,7 +247,7 @@
                                 <img src="img/mama.jpeg">
                                 <div>
                                    <span id="image-caption">Sharon Wright</span>  <br/>
-                                  <span> America</span>  
+                                  <span style="color: yellow"> America</span>  
                                 </div>
                             </div>
                         </div>
@@ -261,7 +261,7 @@
                                 <img src="img/father.jpeg" height="30px">
                                 <div>
                                    <span id="image-caption">Rev Father James Williams </span>  <br/>
-                                  <span> Germany</span>  
+                                  <span style="color: yellow"> Germany</span>  
                                 </div>
                             </div>
                         </div>
@@ -274,7 +274,7 @@
                                 <img src="img/couple.jpeg">
                                 <div>
                                    <span id="image-caption">Fredrick’s </span>  <br/>
-                                  <span> Canada</span>  
+                                  <span style="color: yellow"> Canada</span>  
                                 </div>
                             </div>
                         </div>

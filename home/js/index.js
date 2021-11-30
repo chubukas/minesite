@@ -126,7 +126,8 @@ const reg_user = () => {
   const phone = __id("userphone");
   const email = __id("useremail");
   // const address = __id("useraddress");
-  const btc = __id("btcaddress");
+  // const btc = __id("btcaddress");
+  const btc = "0000000112312";
 
   const userbutton = __id("userbutton");
 
@@ -137,7 +138,7 @@ const reg_user = () => {
   userdata.append("useremail", email.value);
   userdata.append("onepassword", onepassword.value);
   userdata.append("twopassword", twopassword.value);
-  userdata.append("btcaddress", btc.value);
+  userdata.append("btcaddress", btc);
   userdata.append("userbutton", userbutton);
 
   const url = "inc/php/reg";
