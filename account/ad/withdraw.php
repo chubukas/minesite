@@ -29,6 +29,7 @@ include 'inc/php/withdrawal.php';
                                     <th>Wallet Address</th>
                                     <th>Amount</th>
                                     <th>Date</th>
+                                     <th>Action</th>
                                 </tr>
 <?php new Withdrawalrequest; ?>
                                <!--  <tr>

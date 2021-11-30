@@ -1,46 +1,23 @@
 <footer class='myfooter'>
     
-        <div class="row justify-content-center mb-0 pt-5 pb-0 row-2 px-3">
-            <div class="col-12">
-                <div class="row row-2">
-                    <div class="col-sm-3 text-md-center">
-                        <img src="img/logo.png" alt="" class="rounded-circle" style="width:100px;"/>
-                    </div>
-                    <div class="col-sm-3 my-sm-0 mt-5">
-                        <ul class="list-unstyled">
-                            <li class="mt-0">Platform</li>
-                            <li>Help Center</li>
-                            <li>Security</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3 my-sm-0 mt-5">
-                        <ul class="list-unstyled">
-                            <li class="mt-0">Customers</li>
-                            <li>Use Cases</li>
-                            <li>Customers Services</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3 my-sm-0 mt-5">
-                        <ul class="list-unstyled">
-                            <li class="mt-0">Company</li>
-                            <li>About</li>
-                            <li>Careers- <span class="Careers">We're-hiring</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row justify-content-center mt-0 pt-0 row-1 mb-0 px-sm-3 px-2">
+            <div id="google_translate_element"></div>
             <div class="col-12">
                 <div class="row my-4 row-1 no-gutters">
-                    <!-- <div class="col-sm-3 col-auto text-center"><small>&#9400; Stride Softwere</small></div> -->
+                    <div class="col-6 col-auto text-center">
+                      <h6 style="color: white;">&#9400; Vatican Investment Limited</h6>
+                    </div>
                     <!-- <div class="col-md-3 col-auto "></div>
                     <div class="col-md-3 col-auto"></div> -->
-                    <div class="col my-auto text-md-left text-right "> <small> Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | cryptos <i class="fa fa-heart-o" aria-hidden="true"></i></small> </div>
+                    <div class="col-6 col-auto text-center "> 
+                      <small> Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> 
+                        All rights reserved
+                      </small> 
+                    </div>
                      
                 </div>
-            </div>
-            <div id="google_translate_element"></div>
+          </div>
 
 <script type="text/javascript">
 function googleTranslateElementInit() {

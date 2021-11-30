@@ -27,6 +27,8 @@ class Withdrawalrequest extends connection
             // $date = $withdata["reg_date"];
             $date = $withdata["reg_date"];
             $address = $withdata["btc_trans_id"];
+            $transIds = $withdata["transaction_id"];
+            $stat = $withdata["stat"];
 
             $userdetail = $this->connect()->query("SELECT * FROM crypto_users WHERE user_id = '$transuserid'");
                 if ($userdetail->num_rows > 0) {
@@ -51,13 +53,32 @@ class Withdrawalrequest extends connection
 
                                     
                                         
-                                        <td>
-                                            $'.number_format($amount).'
-                                        </td>
-                                        <td>
+                                    <td>
+                                        $'.number_format($amount).'
+                                    </td>
+                                    <td>
                                         <button data-toggle="tooltip" title="Edit" class="pd-setting-ed">
                                             '.$date.'
                                         </button>
+                                    </td>
+                                    <td>';
+                                        if ($stat == 1) 
+                                        {
+                                           echo '<a class="btn btn-success btn-sm mx-2" href="inc/php/withdrawactions?usingid='.$transuserid.'&approve=11&transId='.$transIds.'">Approve</a>';
+                                            echo '<a class="btn btn-danger mr-1 btn-sm" href="inc/php/withdrawactions?usingid='.$transuserid.'&decline=0&transId='.$transIds.'">Decline</a>';
+                                        }
+                                        else
+                                        {
+                                          if ($stat == 0) {
+                                              echo '<div class="badge bg-danger">Decline</div>';
+                                          } 
+                                          
+                                            if ($stat == 11) {
+                                              echo '<div class="badge bg-success">Accepted</div>';
+                                          } 
+                                        }
+                                       
+                                        echo' </div>
                                     </td>
                                 </tr>
 

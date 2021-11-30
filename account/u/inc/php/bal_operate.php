@@ -52,7 +52,7 @@ class Operates extends connection
     	$userid = $_SESSION["id"];
     	
         // $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw4roi2wallet' AND stat = '11' AND user_id = '$userid'");
-        $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND user_id = '$userid'");
+        $checkbal = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND stat = '11' AND user_id = '$userid'");
         if ($checkbal->num_rows > 0) {
         	while ($amount = $checkbal->fetch_assoc()) {
         		$this->withdrawals += $amount["amount"];

@@ -43,7 +43,7 @@ if (isset($_POST["transferbtn"])) {
         	}
         }
 
-        $checktransfers = $dircon->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND stat = '1' AND user_id = '$userId'");
+        $checktransfers = $dircon->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND stat = '11' AND user_id = '$userId'");
         if ($checktransfers->num_rows > 0) {
         	while ($amounttrans = $checktransfers->fetch_assoc()) {
         		$transfers += $amounttrans["amount"];
@@ -51,7 +51,7 @@ if (isset($_POST["transferbtn"])) {
         }
 
 
-        $checktwithdraw = $dircon->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND stat = '1' AND user_id = '$userId'");
+        $checktwithdraw = $dircon->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND stat = '11' AND user_id = '$userId'");
         if ($checktwithdraw->num_rows > 0) {
         	while ($amountwith = $checktwithdraw->fetch_assoc()) {
         		$withdraws += $amountwith["amount"];

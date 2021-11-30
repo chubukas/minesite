@@ -74,7 +74,7 @@ class Myuser extends connection
                 }
 
                 $withdrawals = 0;
-                $checkwith = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND user_id = '$uid'");
+                $checkwith = $this->connect()->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'withdraw' AND stat = '11' AND user_id = '$uid'");
                 if ($checkwith->num_rows > 0) {
                     while ($amount = $checkwith->fetch_assoc()) {
                         $withdrawals += $amount["amount"];
