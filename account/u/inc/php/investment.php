@@ -89,7 +89,7 @@ if (isset($_POST["investbtn"])) {
                     {
 
                         $to = $email;
-                        $subject = 'Welcome to our platform';
+                        $subject = 'Investment Confirmation';
                         $from = $email;
 
                         // To send HTML mail, the Content-type header must be set
