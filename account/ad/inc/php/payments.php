@@ -47,7 +47,7 @@ class Payments extends connection
                     $email = $userdata["email"];
                 }
          
-                if ($status != "11") {
+                if ($status != "11"  && $status != "0") {
                     
                             echo '
                                 <tr>

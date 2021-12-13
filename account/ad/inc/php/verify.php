@@ -100,7 +100,7 @@ class Declinepayment extends connection
     	$harsh = $_SESSION["harsh"];
 
         $this->id = $_GET["decline"];
-        $this->sql = "UPDATE crypto_transaction SET stat = '1' WHERE transaction_id = '$this->id'";
+        $this->sql = "UPDATE crypto_transaction SET stat = '0' WHERE transaction_id = '$this->id'";
         $query = $this->connect()->query($this->sql);
 
         if ($query) {

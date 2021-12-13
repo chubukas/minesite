@@ -350,6 +350,9 @@ const acceptpayment = (transid) => {
   const ajax = new XMLHttpRequest();
   ajax.onload = () => {
     alert(ajax.responseText);
+    setTimeout(() => {
+      window.location.reload(true);
+    }, 500);
   };
   ajax.open("GET", url, true);
   // ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -362,7 +365,9 @@ const declinepayment = (transid) => {
   const ajax = new XMLHttpRequest();
   ajax.onload = () => {
     alert(ajax.responseText);
-    console.log(ajax.responseText);
+    setTimeout(() => {
+      window.location.reload(true);
+    }, 500);
   };
   ajax.open("GET", url, true);
   // ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
