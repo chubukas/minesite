@@ -82,8 +82,8 @@ if (isset($_POST["investbtn"])) {
                     $bouns =    ((10 / 100 ) * $investamount );
                     $transId  = uniqid().rand(100000000, 999999999).uniqid();
 
-                    $boninsert =  $dircon->prepare("INSERT INTO referer_bouns (bouns, ref, transaction_id) VALUES(?,?,?)"); 
-                    $boninsert->bind_param("sss", $bouns, $refs, $transId);
+                    $boninsert =  $dircon->prepare("INSERT INTO referer_bouns (bouns, ref, transaction_id,reg_date,user_id) VALUES(?,?,?,?,?)"); 
+                    $boninsert->bind_param("sssss", $bouns, $refs, $transId,$regdate,$userid);
 
                     if ($boninsert->execute())
                     {
@@ -103,18 +103,18 @@ if (isset($_POST["investbtn"])) {
 
                         // Compose a simple HTML email message
                         $message = '<html><body>';
-                        $message = '<div style="color:black;font-size:18px;">';
+                        $message .= '<div style="color:black;font-size:18px;">';
                         $message .= '<p>Dear Esteemed Investor,</p>';
                         $message .= '<p>Your investment has been confirmed.</p>';
                         $message .= '<p>See more details below.</p>';
                         $message .= '<p>Plan: ' .$plans.'</p>';
                         $message .= '<p>Amount:' .$investamount.'USD</p>';
                         $message .= '<p>Daily Returns:' .$percent.'%</p>';
-                        $message = '</div>';
+                        $message .= '</div>';
                         $message .= '<br/><br/><br/><br/><br/>';
-                        $message = '<div style="color:black;font-size:12px;">';
+                        $message .= '<div style="color:black;font-size:12px;">';
                         $message .= '<p>Best Regards,<br/> Vatican Investment Team.</p>';
-                        $message = '</div>';
+                        $message .= '</div>';
                         $message .= '</body></html>';
 
                         if(mail($to, $subject, $message, $headers))

@@ -15,6 +15,7 @@ if (isset($_POST["withbtn"])) {
         $userId = __("userid");
         $withamount = __("amounts");
         $wallet = __("wallet");
+        $coin = __("coin");
 
          $checkbal = $dircon->query("SELECT * FROM referer_bouns WHERE ref = '$refs'");
         if ($checkbal->num_rows > 0) {
@@ -51,8 +52,6 @@ if (isset($_POST["withbtn"])) {
             die();
         }
 
-        $harsh = uniqid().rand(100000000, 999999999).uniqid();
-
         $transtype = "withdraw";
         $regdate = date("d-m-y");
         $stat = "1";
@@ -63,7 +62,7 @@ if (isset($_POST["withbtn"])) {
 
         $insert =  $dircon->prepare("INSERT INTO crypto_transaction (user_id, transaction_type, amount, btc_trans_id, harsh, ref, reg_date, stat ) VALUES(?,?,?,?,?,?,?,?)");
 
-        $insert->bind_param("ssssssss", $userId, $transtype, $withamount, $wallet, $harsh, $ref, $regdate, $stat);
+        $insert->bind_param("ssssssss", $userId, $transtype, $withamount, $wallet, $coin, $ref, $regdate, $stat);
 
                 if ($insert->execute()){
                     

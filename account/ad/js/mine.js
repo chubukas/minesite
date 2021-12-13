@@ -425,7 +425,6 @@ const changeCoin = () => {
 
   const roidata = new FormData();
 
-  // roidata.append("fileCoin", fileCoin);
   roidata.append("coinName", coinName);
   roidata.append("coinAddress", coinAddress);
   roidata.append("fileCoin", fileCoin, fileCoin.name);
@@ -437,6 +436,69 @@ const changeCoin = () => {
     setTimeout(() => {
       window.location.reload(true);
     }, 1000);
+  };
+
+  ajax.open("POST", url);
+  ajax.send(roidata);
+};
+
+const approveWithdraw = async (userid, transid, amount) => {
+  const coinsuccess = __id(`coinsuccess${transid}`);
+  const email = __id(`coinemail${transid}`).value;
+  const coin = __id(`coincoins${transid}`).value;
+  const btns = __id(`sendwith${transid}`);
+
+  let calculate;
+
+  if (coinsuccess.value == "") {
+    alert("Enter the transanction Id");
+    return true;
+  }
+
+  if (coin == "BitCoin") {
+    await fetch(`https://blockchain.info/tobtc?currency=USD&value=${amount}`)
+      .then((response) => response.json())
+      .then((data) => {
+        calculate = `${data}BTC`;
+      });
+  } else if (coin == "Ethereum") {
+    // Ethrume calculate
+    await fetch(
+      `https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD`,
+      {
+        mode: "cors",
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const price = (1 / data.USD) * amount;
+        calculate = `${price.toFixed(8)}ETH`;
+      });
+  }
+
+  const roidata = new FormData();
+
+  roidata.append("coinsuccess", coinsuccess.value);
+  roidata.append("userid", userid);
+  roidata.append("transid", transid);
+  roidata.append("email", email);
+  roidata.append("amount", amount);
+  roidata.append("calculate", calculate);
+  roidata.append("coin", coin);
+
+  const url = "inc/php/withdrawactions?approve=11";
+  const ajax = new XMLHttpRequest();
+
+  btns.setAttribute("disabled", true);
+  u_innerHTML(`sendwith${transid}`, "Sending....");
+
+  ajax.onload = () => {
+    coinsuccess.value = "";
+    u_innerHTML(`sendwith${transid}`, "Successful");
+    alert(ajax.responseText);
+    setTimeout(() => {
+      window.location.reload(true);
+    }, 500);
   };
 
   ajax.open("POST", url);

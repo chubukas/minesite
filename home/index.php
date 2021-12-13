@@ -162,7 +162,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="section-heading text-center white mx-auto">
-                        <h3 class="mb-4"> VALUES AND SERVICES</h3>
+                        <h3 class="mb-6"> VALUES AND SERVICES</h3>
                         <p>
                            <b>Vatican Investment</b>  offers an opportunity for you to GROW your capital portfolio. 
                             Trading services with BITCOIN as the base currency. 
@@ -188,14 +188,14 @@
                 </div>
                 <div class="col-md-3">
                     <iframe 
-                        src="img/VATICANINVESTMENT.pdf" 
-                        width="100%" height="500px">
+                        src="img/VATICAN INVESTMENT.pdf" 
+                        width="100%" height="420px">
                     </iframe>
                 </div>
                 <div class="col-md-3">
                     <iframe 
-                        src="img/vIstage.pdf" 
-                        width="100%" height="500px">
+                        src="img/vaticancert.pdf" 
+                        width="100%" height="420px">
                     </iframe>
                 </div>
             </div>

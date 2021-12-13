@@ -19,7 +19,7 @@ $prodata = new Profiledetails;
 
 ?>
 
-<div class="product-status mg-b-30" style="color: white;">
+        <div class="product-status mg-b-30" style="color: white;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -36,7 +36,7 @@ $prodata = new Profiledetails;
                                 </div>        
                         </div>
                         <div class="product-status-wrap">
-                            <h4>Transactions</h4>
+                            <h4>Referrals</h4>
                             <table>
                                 <tr>
                                     <th>SN</th>
@@ -44,9 +44,30 @@ $prodata = new Profiledetails;
                                     <th>email</th>
                                     <th>Date</th>
                                 </tr>
-<?php  new Referers; ?>
-                               
-                              
+                                    <?php  new Referers; ?>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="product-status mg-b-30" style="color: white;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-status-wrap">
+                            <h4>Transactions</h4>
+                            <table>
+                                <tr>
+                                    <th>SN</th>
+                                    <th>Full name</th>
+                                    <th>bouns</th>
+                                    <th>Date</th>
+                                </tr>
+                                    <?php new ReferersBouns; ?>
                             </table>
                         </div>
                     </div>

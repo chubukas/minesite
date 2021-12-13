@@ -141,11 +141,8 @@ const deposit = () => {
   const transdata = new FormData();
   transdata.append("depbtn", depbtn);
   transdata.append("amounts", amount.value);
-  transdata.append("transid", transid.value);
+  transdata.append("transid", transact.value);
   transdata.append("userid", userid.value);
-  // transdata.append("amounts", amount.value);
-  // transdata.append("amounts", amount.value);
-  // transdata.append("amounts", amount.value);
 
   const ajax = new XMLHttpRequest();
   const url = "inc/php/deposit";
@@ -154,12 +151,14 @@ const deposit = () => {
     res = JSON.parse(ajax.responseText);
     if (res.resp == "success") {
       setTimeout(() => {
+        amount.value = "";
+        transact.value = "";
         u_innerHTML("depbtn", "Submited");
         u_innerHTML(
           "responses",
           '<p class="alert alert-success" >Your transaction ID was submitted success, kindly wait for approval</p>'
         );
-      }, 1500);
+      }, 500);
     } else {
       setTimeout(() => {
         u_innerHTML(
@@ -170,7 +169,7 @@ const deposit = () => {
         transact.style.border = "1px solid red";
         transact.focus();
         // alert(res.resp);
-      }, 1500);
+      }, 500);
     }
   };
 
@@ -221,9 +220,6 @@ const depositEth = () => {
   transdata.append("amounts", amount.value);
   transdata.append("transid", transact.value);
   transdata.append("userid", userid.value);
-  // transdata.append("amounts", amount.value);
-  // transdata.append("amounts", amount.value);
-  // transdata.append("amounts", amount.value);
 
   const ajax = new XMLHttpRequest();
   const url = "inc/php/deposit";
@@ -232,12 +228,14 @@ const depositEth = () => {
     res = JSON.parse(ajax.responseText);
     if (res.resp == "success") {
       setTimeout(() => {
+        amount.value = "";
+        transact.value = "";
         u_innerHTML("depbtn", "Submited");
         u_innerHTML(
           "responses",
           '<p class="alert alert-success" >Your transaction ID was submitted success, kindly wait for approval</p>'
         );
-      }, 1500);
+      }, 500);
     } else {
       setTimeout(() => {
         u_innerHTML(
@@ -248,7 +246,7 @@ const depositEth = () => {
         transact.style.border = "1px solid red";
         transact.focus();
         // alert(res.resp);
-      }, 1500);
+      }, 500);
     }
   };
 
@@ -267,12 +265,10 @@ const depositEth = () => {
 const withdraw = () => {
   event.preventDefault();
   const amount = __id("amounts");
-  // const reason = __id("reason");
   const userid = __id("userid");
-  // const withfrom = __id("withfrom");
-  // const withto = __id("withto");
   const btn = __id("withbtn");
   const wallet = __id("wallet");
+  const coin = __id("coin");
 
   if (!parseInt(amount.value)) {
     amount.style.border = "1px solid red";
@@ -288,51 +284,27 @@ const withdraw = () => {
     amount.style.border = "1px solid green";
   }
 
-  // if (reason.value.length < 10) {
-  // 	reason.style.border = "1px solid red";
-  // 	alert("Insert the right transaction ID ");
-  // 	return false
-  // }else{
-  // 	reason.style.border = "1px solid green";
-  // }
-
-  // if (
-  //   withfrom.value == "Withdraw from" ||
-  //   withto.value == "Withdraw to" ||
-  //   withto.value == withfrom.value
-  // ) {
-  //   withfrom.style.border = "1px solid red";
-  //   withto.style.border = "1px solid red";
-  //   alert("kindly select all fields respectively");
-  //   return false;
-  // } else {
-  //   withfrom.style.border = "2px solid green";
-  //   withto.style.border = "2px solid green";
-  // }
-
   const transdata = new FormData();
   transdata.append("withbtn", btn);
   transdata.append("amounts", amount.value);
-  // transdata.append("reason", reason.value);
   transdata.append("userid", userid.value);
   transdata.append("wallet", wallet.value);
-  // transdata.append("withfrom", withfrom.value);
-  // transdata.append("withto", withto.value);
+  transdata.append("coin", coin.value);
 
   const ajax = new XMLHttpRequest();
-  // const url = "inc/php/withdrawal";
   const url = "inc/php/withdrawCrypto";
   ajax.onload = (res) => {
-    console.log(ajax.responseText);
     res = JSON.parse(ajax.responseText);
     if (res.resp == "success") {
       setTimeout(() => {
+        amount.value = "";
+        wallet.value = "";
         u_innerHTML("withbtn", "Submited");
         u_innerHTML(
           "responseswith",
           '<p class="alert alert-success" > Successfully!!! Your funds will be creadited to you automatically</p>'
         );
-      }, 1500);
+      }, 500);
     } else {
       setTimeout(() => {
         u_innerHTML(
@@ -343,7 +315,7 @@ const withdraw = () => {
         transact.style.border = "1px solid red";
         transact.focus();
         // alert(res.resp);
-      }, 1500);
+      }, 500);
     }
   };
 
@@ -387,12 +359,14 @@ const transfer = () => {
     console.log(res);
     if (res.resp == "success") {
       setTimeout(() => {
+        amount.value = "";
+        email.value = "";
         u_innerHTML("transferbtn", "Submited");
         u_innerHTML(
           "transferwith",
           '<p class="alert alert-success" > Successfully!!! Your transfer will credited to the receiver automatically</p>'
         );
-      }, 1500);
+      }, 500);
     } else {
       setTimeout(() => {
         u_innerHTML(
@@ -403,7 +377,7 @@ const transfer = () => {
         email.style.border = "1px solid red";
         email.focus();
         // alert(res.resp);
-      }, 1500);
+      }, 500);
     }
   };
 
@@ -577,16 +551,16 @@ const investments = (type, btntype, days, percent) => {
   const url = "inc/php/investment";
 
   ajax.onload = (res) => {
-    console.log(ajax.responseText);
     res = JSON.parse(ajax.responseText);
     if (res.resp == "success") {
       setTimeout(() => {
+        amount.value = "";
         u_innerHTML(btntype, "Submited");
         u_innerHTML(
           "responseInvest",
           '<p class="alert alert-success" >You have invested succesfully</p>'
         );
-      }, 1500);
+      }, 500);
     } else {
       setTimeout(() => {
         u_innerHTML(
@@ -597,7 +571,7 @@ const investments = (type, btntype, days, percent) => {
         amount.style.border = "1px solid red";
         amount.focus();
         // alert(res.resp);
-      }, 1500);
+      }, 500);
     }
   };
 

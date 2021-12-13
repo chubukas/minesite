@@ -1,6 +1,5 @@
 <?php 
 
-// include '../../dumps/connect.php';
 
 
 
@@ -17,84 +16,70 @@ class Referers extends connection
         $refs = $_SESSION["refs"];
 
         $checkrefs = $this->connect()->query("SELECT * FROM crypto_users WHERE ref = '$refs' ORDER BY reg_date DESC");
-        // $checkrefs = $this->connect()->query("SELECT fullname, crypto_transaction.reg_date as reg_date, transaction_type, amount FROM crypto_users LEFT JOIN crypto_transaction  ON crypto_users.user_id = crypto_transaction.user_id WHERE crypto_users.ref = '$refs' AND crypto_transaction.ref = '$refs' ");
-        if ($checkrefs->num_rows > 0) {
-        	while ($transdata = $checkrefs->fetch_assoc()) {
+
+        if ($checkrefs->num_rows > 0) 
+        {
+        	while ($transdata = $checkrefs->fetch_assoc()) 
+            {
         		$type = $transdata["fullname"];
-        		// $amount = $transdata["amount"];
         		$date = $transdata["reg_date"];
-        		// $status = $transdata["transaction_type"];
                 $email = $transdata["email"];
         		
-
-                    echo '
-
-
-								<tr>
-                                   <td>'.$this->sn++.'</td>
-                                    <td>';
-
-
-
- 							
-                                    	echo $type;
-                                        
-                                 
-
-
-
-                                   
-                                     echo '</td>
-                                    <td>'. $email.'</td>';
-
-                  					
-
-//  echo '<td>'..'</td>';
-
-
-                                    echo '<td>
-                                        <button data-toggle="tooltip" title="Edit" class="pd-setting-ed">
-                                            '.$date.'
-                                        </button>
-                                    </td>
-                                </tr>
-
-
-
-';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                echo 
+                '
+                    <tr>
+                        <td>'.$this->sn++.'</td>
+                        <td>'.$type.'</td>
+                        <td>'. $email.'</td>
+                        <td>
+                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed">
+                                '.$date.'
+                            </button>
+                        </td>
+                    </tr>
+                ';
         	}
         }
-        // return $this->transact;
 	}
 }
 
 
+class ReferersBouns extends connection
+{
+	
+	function __construct()
+	{
+		$this->sn = 1;
+        $refs = $_SESSION["refs"];
 
+        $bounsrefs = $this->connect()->query("SELECT referer_bouns.bouns, referer_bouns.reg_date as regdates, crypto_users.fullname FROM crypto_users JOIN referer_bouns WHERE crypto_users.ref = '$refs' AND crypto_users.user_id = referer_bouns.user_id");
+        if ($bounsrefs->num_rows > 0) 
+        {
+        	while ($bounsdata = $bounsrefs->fetch_assoc()) 
+            {
+                
+        		$bouns = $bounsdata["bouns"];
+                $date = $bounsdata["regdates"];
+                $names = $bounsdata["fullname"];
 
+                echo 
+                '
+                    <tr>
+                        <td>'.$this->sn++.'</td>
+                        <td>'.$names.'</td>
+                        <td>'. $bouns.'</td>
+                        <td>
+                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed">
+                                '.$date.'
+                            </button>
+                        </td>
+                    </tr>
+                ';
+        	}
+        }
 
-
-
-
-
-
-
-
-
+	}
+}
 
 
 ?>

@@ -77,17 +77,17 @@ if (isset($_POST["userbutton"])) {
 					
 					// Compose a simple HTML email message
 					$message = '<html><body>';
-					$message = '<div style="color:black;font-size:18px;">';
+					$message .= '<div style="color:black;font-size:18px;">';
 					$message .= '<p>Dear Esteemed Investor,</p>';
 					$message .= '<p>We are glad you have decided to partner with Vatican Investiment Limited.</p>';
 					$message .= '<p>Here are your login details.</p>';
 					$message .= '<p>Email: ' .$email.'</p>';
 					$message .= '<p>Password: xxxxxxxxxx.</p>';
-					$message = '</div>';
+					$message .= '</div>';
 					$message .= '<br/><br/><br/><br/><br/>';
-					$message = '<div style="color:black;font-size:12px;">';
+					$message .= '<div style="color:black;font-size:12px;">';
 					$message .= '<p>Best Regards,<br/> Vatican Investment Team.</p>';
-					$message = '</div>';
+					$message .= '</div>';
 					$message .= '</body></html>';
 
 					if(mail($to, $subject, $message, $headers))
