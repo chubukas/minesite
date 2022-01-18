@@ -586,3 +586,61 @@ const investments = (type, btntype, days, percent) => {
 
   ajax.send(transdata);
 };
+
+const reinvest = (type, btntype, days, percent) => {
+  event.preventDefault();
+  const amount = __id(type);
+  const userid = __id("reinuserid").value;
+
+  if (!parseInt(amount.value)) {
+    amount.style.border = "1px solid red";
+    alert("Amount must be a number only");
+    return false;
+  }
+
+  const transdata = new FormData();
+  transdata.append("userid", userid);
+  transdata.append("amounts", amount.value);
+  transdata.append("investbtn", btntype);
+  transdata.append("days", days);
+  transdata.append("percent", percent);
+
+  const ajax = new XMLHttpRequest();
+  const url = "inc/php/reinvest";
+
+  ajax.onload = (res) => {
+    res = JSON.parse(ajax.responseText);
+    if (res.resp == "success") {
+      setTimeout(() => {
+        amount.value = "";
+        u_innerHTML(btntype, "Submited");
+        u_innerHTML(
+          "reResponseInvest",
+          '<p class="alert alert-success" >You have invested succesfully</p>'
+        );
+      }, 500);
+    } else {
+      setTimeout(() => {
+        u_innerHTML(
+          "reResponseInvest",
+          '<p class="alert alert-danger" >' + res.resp + "</p>"
+        );
+        u_innerHTML(btntype, "Try again");
+        amount.style.border = "1px solid red";
+        amount.focus();
+        // alert(res.resp);
+      }, 500);
+    }
+  };
+
+  ajax.onprogress = () => {
+    u_innerHTML(
+      btntype,
+      '<p class="spinner-border text-sm spinner-border-sm text-dark" ></p> Loading...'
+    );
+    // u_innerHTML("responses", '<p class="alert alert-success spinner-border text-sm spinner-border-sm text-light" ></p> Loading...');
+  };
+  ajax.open("POST", url, true);
+
+  ajax.send(transdata);
+};

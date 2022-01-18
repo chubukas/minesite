@@ -248,6 +248,12 @@ ul.dtl-social li a {
   float: none;
   position: relative;
 }
+
+.mycustomscrollbar {
+  max-height: 25rem;
+  overflow-y: auto;
+}
+
 .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li .left-menu-dropdown {
   left: 0px;
   top: 0px;

@@ -20,6 +20,12 @@
                         <i class="fa fa-sign-in"></i> Signin
                     </button> -->
 
+<li class="active">
+    <a class="" href="ReInvest">
+           <i class="fa fa-money icon-wrap"></i>
+           <span class="mini-click-non">Re-Invest</span>
+        </a>
+</li>
 
 
 <li class="active">

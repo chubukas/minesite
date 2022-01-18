@@ -119,7 +119,6 @@ class Operates extends connection
 
     public function roi()
     {
-    	// return $this->roi_bal() - $this->withdrawals() + $this->referer_bouns();
         return ($this->referer_bouns() + $this->myRoi_invest()) - ($this->transfers() + $this->withdrawals());
         
     }

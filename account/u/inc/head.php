@@ -110,6 +110,7 @@ window.smartsupp||(function(d) {
     
 </head>
 
+
 <body>
    
     <!--[if lt IE 8]>
@@ -130,7 +131,7 @@ window.smartsupp||(function(d) {
 					<h2 class="text-success"> <?php echo $_SESSION["name"]; ?> <span class="min-dtn"></span></h2>
 				</div>
 			</div>
-            <div class="left-custom-menu-adp-wrap comment-scrollbar">
+            <div class="mycustomscrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <?php include 'menu.php' ?>
