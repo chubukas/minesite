@@ -74,9 +74,10 @@ if (isset($_POST["investbtn"])) {
             die();
         }
 
-        $insert =  $dircon->prepare("INSERT INTO  investments (user_id, amount, num_days, roi_percent, reg_date) VALUES(?,?,?,?,?)");
+        $roiwallet = "roiwallet";
+        $insert =  $dircon->prepare("INSERT INTO  investments (user_id, amount, num_days, roi_percent, reg_date,invest_type) VALUES(?,?,?,?,?,?)");
 
-        $insert->bind_param("sssss", $userid, $investamount, $days, $percent, $regdate);
+        $insert->bind_param("ssssss", $userid, $investamount, $days, $percent, $regdate,$roiwallet);
 
                 if ($insert->execute()){
 

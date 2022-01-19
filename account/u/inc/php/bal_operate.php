@@ -163,6 +163,20 @@ class Operates extends connection
         $this->wallet = 0;
     	$userid = $_SESSION['id'];
     	
+        $checkbal = $this->connect()->query("SELECT * FROM  investments WHERE user_id = '$userid'AND invest_type != 'roiwallet'");
+        if ($checkbal->num_rows > 0) {
+        	while ($amount = $checkbal->fetch_assoc()) {
+        		$this->wallet += $amount["amount"];
+        	}
+        }
+        return $this->wallet;
+    }
+
+        public function myTotalInvesments()
+    {
+        $this->wallet = 0;
+    	$userid = $_SESSION['id'];
+    	
         $checkbal = $this->connect()->query("SELECT * FROM  investments WHERE user_id = '$userid'");
         if ($checkbal->num_rows > 0) {
         	while ($amount = $checkbal->fetch_assoc()) {

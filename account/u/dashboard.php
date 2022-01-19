@@ -53,7 +53,7 @@ $amount = new Operates;
                             <div class="income-dashone-pro">
                                 <div class="income-rate-total">
                                     <div class="price-nalika-rate">
-                                        <h3><span>$</span><span class="counter"><?php echo number_format($amount->myInvesments()).".00"; ?></span></h3>
+                                        <h3><span>$</span><span class="counter"><?php echo number_format($amount->myTotalInvesments()).".00"; ?></span></h3>
                                     </div>
                                 </div>
                                 <div class="income-range order-cl">

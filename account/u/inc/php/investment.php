@@ -37,7 +37,7 @@ if (isset($_POST["investbtn"])) {
 
         $deposit = $dircon->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'depositApproved' AND user_id = '$userid'");
 
-        $invest = $dircon->query("SELECT amount FROM investments WHERE user_id = '$userid'");
+        $invest = $dircon->query("SELECT amount FROM investments WHERE user_id = '$userid' AND invest_type != 'roiwallet'");
 
          $receives = $dircon->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND stat = '1' AND btc_trans_id = '$email'");
 
@@ -73,9 +73,10 @@ if (isset($_POST["investbtn"])) {
             die();
         }
 
-        $insert =  $dircon->prepare("INSERT INTO  investments (user_id, amount, num_days, roi_percent, reg_date) VALUES(?,?,?,?,?)");
+        $wallet = "";
+        $insert =  $dircon->prepare("INSERT INTO  investments (user_id, amount, num_days, roi_percent, reg_date,invest_type) VALUES(?,?,?,?,?,?)");
 
-        $insert->bind_param("sssss", $userid, $investamount, $days, $percent, $regdate);
+        $insert->bind_param("ssssss", $userid, $investamount, $days, $percent, $regdate, $wallet);
 
                 if ($insert->execute()){
 
@@ -126,12 +127,12 @@ if (isset($_POST["investbtn"])) {
                         // echo json_encode(["resp"=>"success"]);
                     }
                     else{
-                        echo json_encode(["resp"=>"Failed... please try again"]);
+                        echo json_encode(["resp"=>"Failed... please try again bonus"]);
 
                     }
                     
                 }else{
-                    echo json_encode(["resp"=>"Failed please try again"]);
+                    echo json_encode(["resp"=>"Failed please try again invest"]);
                     die();
             }
         }
