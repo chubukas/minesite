@@ -381,7 +381,12 @@ const updateAmount = (id, deposit) => {
 
   const roidata = new FormData();
 
-  const total = parseInt(amount) + parseInt(deposit);
+  let total = 0;
+  if (deposit == undefined) {
+    total = amount;
+  } else {
+    total = parseInt(amount) + parseInt(deposit);
+  }
 
   roidata.append("amount", total);
   roidata.append("userid", id);

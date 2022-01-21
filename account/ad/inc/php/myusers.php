@@ -53,7 +53,7 @@ class Myuser extends connection
                 }
 
                 $myinvest = 0;
-                $invets = $this->connect()->query("SELECT * FROM  investments WHERE user_id = '$uid'");
+                $invets = $this->connect()->query("SELECT * FROM  investments WHERE user_id = '$uid' AND invest_type != 'roiwallet'");
                 if ($invets->num_rows > 0) 
                 {
                     while ($amounted = $invets->fetch_assoc()) 

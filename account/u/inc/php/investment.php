@@ -39,7 +39,7 @@ if (isset($_POST["investbtn"])) {
 
         $invest = $dircon->query("SELECT amount FROM investments WHERE user_id = '$userid' AND invest_type != 'roiwallet'");
 
-         $receives = $dircon->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND stat = '1' AND btc_trans_id = '$email'");
+         $receives = $dircon->query("SELECT * FROM crypto_transaction WHERE transaction_type = 'transfer' AND stat = '11' AND btc_trans_id = '$email'");
 
 
         if ($deposit->num_rows > 0) {

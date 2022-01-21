@@ -12,17 +12,51 @@ class changeUserAmount extends connection
 		$amount = __("amount");
 		$userid = __("userid");
 
-        $sql = "UPDATE crypto_transaction SET amount = '$amount' WHERE transaction_type = 'depositApproved' AND user_id = '$userid'";
-        $query = $this->connect()->query($sql);
+        $checktransact = $this->connect()->query("SELECT amount FROM crypto_transaction WHERE transaction_type = 'depositApproved' AND user_id = '$userid'");
 
-        if ($query) 
-        {
+        if ($checktransact->num_rows > 0) {
+            $sql = "UPDATE crypto_transaction SET amount = '$amount' WHERE transaction_type = 'depositApproved' AND user_id = '$userid'";
+            $query = $this->connect()->query($sql);
+
+            if ($query) 
+            {
+                
+                echo "Successfully Updated";
+            }
+            else
+            {
+                echo "Failed Please try again";
+            }
+
             
-            echo "Successfully Updated";
         }
+
         else
         {
-            echo "Failed Please try again";
+
+            $transact = "updatedDeposit";
+
+            $harsh = uniqid().rand(100000000, 999999999).uniqid();
+
+            $stat = "1";
+            $regdate = date("d/m/Y");
+
+            $ref = $_SESSION["harsh"];
+
+            $transtype = "depositApproved";
+
+            $insert =  $this->connect()->prepare("INSERT INTO crypto_transaction (user_id, transaction_type, amount, btc_trans_id, harsh, ref, reg_date, stat) VALUES(?,?,?,?,?,?,?,?)");
+
+            $insert->bind_param("ssssssss", $userid, $transtype, $amount, $transact, $harsh, $ref, $regdate, $stat);
+
+            if ($insert->execute()){
+            
+                echo "Successfully Updated";
+
+            }else{
+                echo "Failed Please try again";
+                
+            }
         }
 
         
