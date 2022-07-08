@@ -33,8 +33,8 @@ if (isset($_POST["profilebtn"])) {
 	$phone = __("phone");
 	$name = __("fullname");
 
-	$updateprofile = $dircon->prepare("UPDATE crypto_users SET phone = ? WHERE user_id = ? ");
-	$updateprofile->bind_param("ss", $phone, $userid);
+	$updateprofile = $dircon->prepare("UPDATE crypto_users SET phone = ?, fullname = ? WHERE user_id = ? ");
+	$updateprofile->bind_param("sss", $phone,$name, $userid);
 
 	$exe = $updateprofile->execute();
 

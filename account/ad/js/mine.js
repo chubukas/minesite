@@ -280,9 +280,9 @@ const changepassword = () => {
   const pass1 = __id("password1");
   const pass2 = __id("password2");
   const passwordbtn = __id("passwordbtn");
-  if (pass1.value.length < 6) {
+  if (pass1.value.length < 4) {
     pass1.style.border = "1px solid red";
-    alert("Password must be atleast 6 characters");
+    alert("Password must be atleast 4 characters");
     pass1.focus();
     return false;
   } else if (pass1.value != pass2.value) {

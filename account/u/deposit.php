@@ -17,7 +17,16 @@ if ($bitcoin->num_rows > 0)
 }
 
 
-$ethereum =  $dircon->query("SELECT * FROM mycoinwallets WHERE coin_name = 'Ethereum'");
+// $ethereum =  $dircon->query("SELECT * FROM mycoinwallets WHERE coin_name = 'Ethereum'");
+
+// if ($ethereum->num_rows > 0) 
+// {
+//     $Ecoin = $ethereum->fetch_assoc();
+//     $ethereumImage = $Ecoin["coin_image"];
+//     $ethereumAddress = $Ecoin["coin_address"]; 
+// }
+
+$ethereum =  $dircon->query("SELECT * FROM mycoinwallets WHERE coin_name = 'USDT'");
 
 if ($ethereum->num_rows > 0) 
 {
@@ -131,7 +140,7 @@ if ($ethereum->num_rows > 0)
                             <div id="myTabContent" class="tab-content custom-product-edit">
                                 <div class="product-tab-list tab-pane fade active in" id="description">
                                     <h3 style="color: white; font-style: underline; text-align: center; padding-bottom: 10px;">
-                                        Etherum Payment
+                                        USDT Payment
                                     </h3>
                                     <div class="row">
 
@@ -171,12 +180,12 @@ if ($ethereum->num_rows > 0)
                                                     </div>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="fa fa-diamond"></i></span>
-                                                        <input type="text" name="ethcoin" id="ethcoin" class="form-control" placeholder="Etherum" disabled style="background-color: green;"/>
+                                                        <input type="text" name="ethcoin" id="ethcoin" class="form-control" placeholder="USDT" disabled style="background-color: green;"/>
                                                     </div>
                                                     
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" name="transidEth" id="transidEth" placeholder="ETH transaction ID">
+                                                        <input type="text" class="form-control" name="transidEth" id="transidEth" placeholder="USDT transaction ID">
                                                     </div>
                                                 </div>
                                                                                         

@@ -45,7 +45,7 @@ include 'inc/modals.php';
                                                             <select class="form-control" id="coin" name="coin">
                                                                 <option>Select crypto coin</option>
                                                                 <option>BitCoin</option>
-                                                                <option>Ethereum</option>
+                                                                <option>USDT</option>
                                                             </select>
                                                         </div>
                                                     </div> 

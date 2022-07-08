@@ -44,7 +44,7 @@ $amount = new Operates;
                             <select id="coinName"  name="coinName" class="form-control">
                                 <option>Select crypto coin</option>
                                 <option>BitCoin</option>
-                                <option>Ethereum</option>
+                                <option>USDT</option>
 
                             </select>
                         </div>

@@ -39,7 +39,7 @@ $prodata = new Profiledetails;
                                                     </div>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
-                                                        <input type="text" id="email" name="email" class="form-control" value="<?php echo $prodata->email; ?>" placeholder="Email">
+                                                        <input type="text" id="email" name="email" class="form-control" value="<?php echo $prodata->email; ?>" placeholder="Email" disabled style="background-color: #152036;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -73,7 +73,7 @@ $prodata = new Profiledetails;
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="text-center custom-pro-edt-ds">
-                                                    <button onclick="changepassword()" type="submit" class="btn btn-ctl-bt waves-effect waves-light m-r-10" id="passwordbtn" id="passwordbtn">Update
+                                                    <button type="submit" class="btn btn-ctl-bt waves-effect waves-light m-r-10" id="passwordbtn" id="passwordbtn">Update
                                                         </button>
                                                 </div>
                                             </div>
